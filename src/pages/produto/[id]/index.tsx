@@ -68,7 +68,7 @@ export default function produto() {
                     <button className="botao border border-white rounded-full font-bold px-8 py-2">Login</button>
                 </div>
             </header>
-            <div className="bg-[url('https://ibb.co/R3nZj3j')]"
+            <div className="bg-[url('https://media.discordapp.net/attachments/1063180963439464641/1068624011786993814/shinabg.png?width=1025&height=214')]"
                 style={{
                     height: 303
                 }}>
@@ -78,27 +78,37 @@ export default function produto() {
                 <img className='w-[567px] mt-[154px] ml-[199px] ' src="https://app.rifandos.com.br/public/images/default.png" alt="" />
 
                 <div className='rounded bg-slate-600 ml-[805px] w-[697px] h-[50px] mt-[-40px]'>
-                <h1 className='text-white mt-[-556px] ml-[159px] text-[33px]'>{raffle?.title}</h1>
+                    <h1 className='text-white mt-[-556px] ml-[159px] text-[33px]'>{raffle?.title}</h1>
                 </div>
                 <div className='container text-center  mt-[17px]'>
                     <h1 className='text-white text-[30px] ml-[738px] mt-[17px]'>Números automaticos</h1>
                     <p className='text-white text-[20px] mt-[10px] ml-[738px]'>O site escolhe os números para você</p>
                 </div>
-                <div className='container mt-[-79px]'>
+                <div className="container ">
+                    <h1 className="text-green-500 text-center p-[39px] ml-[711px] ">PROMOÇÃO</h1>
+                    <p className="text-white text-center mt-[-3px] ml-[711px] ">COMPRE MAIS BARATO</p>
+                    <div className="grid grid-cols-4 gap-4 p-[160px] ml-[703px] mt-[-177px] ">
+                        <button className="bg-green-600 w-[123px] text-white text-center rounded " onClick={() => setAmoutOfTickets(100)}>100 COTAS POR R$7,00</button>
+                        <button className="bg-green-600 w-[123px] text-white text-center rounded " onClick={() => setAmoutOfTickets(100)}>100 COTAS POR R$7,00</button>
+                        <button className="bg-green-600 w-[123px] text-white text-center rounded  " onClick={() => setAmoutOfTickets(100)}>100 COTAS POR R$7,00</button>
+                        <button className="bg-green-600 w-[123px] text-white text-center rounded " onClick={() => setAmoutOfTickets(100)}>100 COTAS POR R$7,00</button>
+                    </div>
+                </div>
+                <div className='container mt-[-273px]'>
                     <h1 className='text-white  ml-[1054px] mt-[162px] text-[20px]'>
                         {amountOfTickets}x R$ {raffle?.price} = R$ {typeof raffle?.price === 'number' && amountOfTickets * raffle?.price}
                     </h1>
                     <span className='text-white ml-[1038px] mt-[162px] text-[15px]'>Selecione uma quantidade</span>
                 </div>
                 <div className='grid grid-cols-4 gap-4 w-[503px] h-[60px] mt-[26px] ml-[909px]'>
-                    <button 
+                    <button
                         className='bg-green-600 hover:bg-green-500 w-[123px] border-stone-100 rounded text-white text-center'
                         onClick={() => setAmoutOfTickets(1)}
                     >
                         01<br />
                         SELECIONAR
                     </button>
-                    <button 
+                    <button
                         className='bg-green-600 hover:bg-green-500 w-[123px] border-stone-100 rounded text-white text-center'
                         onClick={() => setAmoutOfTickets(10)}
                     >
@@ -112,7 +122,7 @@ export default function produto() {
                         50<br />
                         SELECIONAR
                     </button>
-                    <button 
+                    <button
                         className='bg-green-600 hover:bg-green-500 w-[123px] border-stone-100 rounded text-white text-center'
                         onClick={() => setAmoutOfTickets(100)}
                     >
@@ -121,8 +131,8 @@ export default function produto() {
                     </button>
                 </div>
                 <div className='bg-slate-900 w-[615px] h-[79px] mt-[36px] ml-[859px] '>
-                
-                    <button 
+
+                    <button
                         className="bg-slate-900 h-[44px] hover:bg-slate-600 text-white font-bold py-2 px-4 mt-[22px] rounded"
                         onClick={() => setAmoutOfTickets((amount: number) => amount + 1)}
                     >
@@ -131,7 +141,7 @@ export default function produto() {
                         </svg>
 
                     </button>
-                    <button 
+                    <button
                         className="rounded bg-slate-900 h-[44px] hover:bg-slate-600 text-white font-bold mt-=22 py-2 px-4 ml-[504px] "
                         onClick={() => setAmoutOfTickets((amount: number) => amount - 1 <= 0 ? amount : amount - 1)}
                     >
@@ -140,7 +150,7 @@ export default function produto() {
                         </svg>
                     </button>
                 </div>
-                <button 
+                <button
                     className="rounded bg-green-600 hover:bg-green-500 h-[44px]  text-white font-bold py-2 px-4 ml-[504px]  w-[503px] mt-[53px] ml-[906px] "
                     onClick={submitBuy}
                 >
@@ -151,8 +161,8 @@ export default function produto() {
             <div className='text-white text-center text-[20px] mt-[-145px] ml-[604px] '>{amountOfTickets}</div>
             <div>subir</div>
             <div>subir</div>
-               <div>subir</div>
-               <div>subir</div>
+            <div>subir</div>
+            <div>subir</div>
         </div>
     );
 }
